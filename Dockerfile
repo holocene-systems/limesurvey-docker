@@ -5,7 +5,7 @@ RUN set -o errexit -o nounset -o xtrace; \
     apt-get update; \
     apt-get install --assume-yes --no-install-recommends libpq-dev; \
     docker-php-ext-install pdo_pgsql; \
-    rm -rf /var/lib/apt/lists/*
+    rm --recursive /var/lib/apt/lists
 
 # AWS Fargate doesn't support persistent file bind mounts, which is why
 # here we're creating an overlay volume that stores mutable data such as
