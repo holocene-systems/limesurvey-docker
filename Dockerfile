@@ -1,4 +1,4 @@
-FROM acspri/limesurvey:4.4.10
+FROM acspri/limesurvey:4.4.12
 
 # Set up PHP with PostgreSQL PDO support.
 RUN set -o errexit -o nounset -o xtrace; \
